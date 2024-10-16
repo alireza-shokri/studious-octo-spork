@@ -480,7 +480,7 @@ window.onload = function () {
   setTimeout(() => {
     $.querySelector(".section").style.display = "block";
     $.querySelector(".loader").style.display = "none";
-  }, 2000);
+  }, 500);
 };
 // event
 left_heart.addEventListener("click", fanc_heart_color);

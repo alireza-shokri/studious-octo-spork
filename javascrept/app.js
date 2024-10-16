@@ -261,7 +261,7 @@ window.onload=function(){
         $.querySelector('.contenir').style.display='block';
         let sect3_allstyle_box=getComputedStyle(sect3_all_box[0])
         jahat=sect3_all_box[0].offsetWidth+(parseFloat(sect3_allstyle_box.margin)*2);
-    }, 2000);
+    }, 500);
 }
 // addEventListener 
 theme.addEventListener('click',setstorage)
