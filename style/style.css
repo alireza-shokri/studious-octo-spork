@@ -1,0 +1,567 @@
+@font-face {
+    font-family: 'ravi_regular';
+    src: url(../Folder_ravi/Ravi-Regular.ttf)  format('truetype'),
+}
+@font-face {
+    font-family: 'ravi_bold';
+    src: url("../Folder_ravi/Ravi-Bold.ttf") format('truetype'),
+}
+@font-face {
+    font-family: 'ravi_light';
+    src:  url("../Folder_ravi/Ravi-Light.ttf") format('truetype'),
+}
+:root{
+    --color_body: rgba(162, 178, 179,0.3);
+    --color_menu:none;
+    --menu_repairmodle:orangered;
+    --border_radus:0.5rem;
+    --color_orangred:orangered;
+    --color_hover:orangered;
+    --color_menu_link:rgb(5, 3, 0);
+    --color_name_project:dark;
+    --color_dark:rgba(0, 0, 0, 0.288);
+    --color_black_desc_skill:black;
+    --background_sect1:none;
+    --color_sect1_desc:none;
+    --color_sect1_communication:none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--color_body);
+    font-family:'ravi_light';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* loader */
+.parent_loader{
+    display: flex;
+    justify-content: center;
+    min-height: 97vh;
+    align-items: center;
+  }
+.loader {
+    width: 10rem;
+    height: 2rem;
+    -webkit-mask: conic-gradient(from 135deg at top ,#0000,#000 .5deg 90deg,#0000 90.5deg) 0 0 ,
+    conic-gradient(from -45deg at bottom,#0000,#000 .5deg 90deg,#0000 90.5deg) 0 100%;
+    -webkit-mask-size:25% 50%;
+    -webkit-mask-repeat:repeat-x;
+    background: linear-gradient(#e47208 0 0) left/0% 100% no-repeat #ddd;
+    animation: loading 2s infinite linear;
+    }
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.boxshadow{
+    box-shadow: 0 3px 9px rgba(61, 60, 60, 0.719);
+}
+.border_radus{
+    border-radius: 0.4rem;
+}
+/* -------------------------  */
+.header{
+    position: relative;
+    display: none;
+}
+.navar_hed{
+    height:0.25rem;
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 255, 0, 0.452);
+}
+.sun_top{
+    width: 7rem;
+    height: 7rem;
+    position: fixed;
+    top: 0rem;
+    left: 0;
+    clip-path: circle(4rem at left top );
+    background-color: orange;
+    z-index: 4;
+}
+.menu_icone{
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    height: 2.4rem;
+    line-height: 2.4rem;
+    font-size: 2.3rem;
+    color: var(--color_orangred);
+    box-shadow: 1px 1px 3px rgb(238, 235, 230),
+    1px 1px 3px rgb(27, 27, 26);
+    backdrop-filter: blur(1rem);
+    cursor: pointer;
+    border-radius: 0.4rem;
+    z-index: 5;
+}
+.menu_cansle{
+     display: none;
+ }
+.animation_translateX{
+    animation: theme_translateX 1s linear;
+}
+/* ---- */
+.menu_shape{
+    display: none;
+    padding-left: 1rem;
+}
+.menu{
+    width:75%;
+    position: fixed;
+     left: 0;
+     right: 0;
+     margin: 0 auto;
+     top: -80px;
+    padding: 0.4rem  2rem 0.4rem 0.8rem;
+    border-right:0.25rem solid  var(--color_orangred);
+    border-left:0.25rem solid  var(--color_orangred);
+    background-color:var(--color_menu);
+    backdrop-filter: blur(1.2rem);
+    transition: all 0.4s linear;
+    z-index: 5;
+}
+.menu_btn_theme{
+    width: 6rem;
+    height: 2.8rem;
+    text-align: end;
+    line-height: 2.8rem;
+    background-color: rgb(124, 184, 34);
+    border: 0.15rem solid var(--color_orangred);
+    cursor: pointer;
+}
+.menu_repairmodle{
+    display: inline-block;
+    height: 1.7rem;
+    margin-top: 0.4rem;
+    transform-origin:center ;
+    font-size:1.6rem;
+    cursor: pointer;
+    color: var(--menu_repairmodle);
+    
+}
+.menu_list{
+    list-style-type: none;
+}
+.menu_iteam_link{
+    text-decoration: none;
+    width: 5.5rem;
+    display: inline-block;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    letter-spacing: 0.07rem;
+    color: var(--color_menu_link);
+    font-family: 'ravi_light';
+    transition: 0.3s ease;
+}
+/* --------menu2  */
+.menu_2{
+    width: 15rem;
+    position: fixed;
+    right: -250px;
+    margin-top:3.5rem;
+    padding: 0.5rem;
+    font-size: 2.8rem;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    color: var(--color_orangred);
+    backdrop-filter: blur(0.4rem);
+    z-index: 5;
+    transition: all 0.3s linear;
+}
+.menu_iteam{
+    text-align: center;
+
+}
+.menu_iteam_link_2{
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    width: 8.5rem;
+    padding:0.5rem;
+    margin: 0.48rem auto;
+    font-size: 1.1rem;
+    letter-spacing: 0.07rem;
+    color: var(--color_menu_link);
+    font-family: 'ravi_light';
+    transition: 0.3s ease;
+}
+.menu_btn_theme_2{
+    width: 50%;
+    height: 2.8rem;
+    margin-top: 1rem;
+    text-align: end;
+    line-height: 2.8rem;
+    background-color: rgb(124, 184, 34);
+    border: 0.15rem solid var(--color_orangred);
+    cursor: pointer;
+}
+.menu_list_2{
+    list-style-type: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.class_rotate_menu_icone{
+    animation: scale_menu_icone 0.2s linear;
+}
+.class_rotate_repair{
+    animation: rotate_repair 0.3s linear;
+}
+/* ---------------------------  */
+.contenir{
+    max-width:75rem;
+    margin: 2rem auto 1.5rem auto;
+    display: none;
+}
+:is(.section_1,.section_2,.section_3){
+    padding: 1rem;
+}
+/* ---------------------------  */
+.section_1{
+    width: 100%;
+    justify-content: space-evenly;
+    background-color: var(--background_sect1);
+}
+.sect1_picktur{
+    width: 30%;
+    object-fit: cover;
+    clip-path: circle();
+    border: 0.5rem solid orange;
+    border-radius: 1rem;
+    border-bottom: 0.5rem solid var(--color_orangred);
+    animation: 8s scale_img linear infinite;
+}
+.sect1_par_desc{
+    flex-basis: 50%;
+    color: var(--color_sect1_desc);
+}
+.sect1_desc{
+    letter-spacing: 0.05rem;
+}
+.sect1_name_me{
+    color: orangered;
+}
+.sect1_communication{
+    margin-top: 5rem;
+    text-align: center;
+}
+.sect1_communication .bi{
+    padding: 0.5rem;
+    font-size: 1.8rem;
+    transition: 0.2s;
+    color: var(--color_sect1_communication);
+}
+/* ---------------------------------section2 */
+.section_2{
+    flex-wrap: wrap;
+    width: 100%;
+    margin:0 auto;
+}
+.sect2_title_skill{
+    width: 15rem;
+    height: 2rem;
+    line-height: 2.1rem;
+    margin: 2.3rem auto ;
+    text-align: center;
+    background-color: var(--color_orangred);
+    font-size: 1.1rem;
+}
+.sect2_box_skill{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin-bottom:3rem;
+    border-bottom: 1px solid var(--color_dark);
+}
+.sect2_par_img_project{
+    width:100% ;
+}
+.revers_box{
+    flex-direction: row-reverse;
+}
+.sect2_box_skill:not(.revers_box) .sect2_img{
+    border-right:0.4rem solid var(--color_orangred) ;
+}
+.revers_box .sect2_img{
+    border-left:0.4rem solid var(--color_orangred) ;
+}
+.sect2_par_img{
+    flex-basis: 40%;
+    border-radius: 0.4rem;
+}
+.sect2_img{
+    width: 100%;
+    border-radius: inherit;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.sect2_par_des{
+    flex-basis: 45%;
+}
+.sect2_name{
+    width: 10rem;
+    height: 3rem;
+    line-height: 2.3rem;
+    margin: 0 auto 1.6rem auto;
+    text-align: center;
+    color:var(--color_name_project);
+    border-radius: 0.3rem 0.3rem 0 0;
+    background-color: orange;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 47% 100%, 50% 75%, 0% 75%)
+}
+.sect2_desc{
+    text-align: justify;
+    font-size: 1.2rem;
+    font-family: 'ravi_light' sans-serif ;
+    color: var(--color_black_desc_skill);
+}
+/* sect3--------------------------------------------  */
+.section_3{
+    width: 100%;
+    margin: 2rem 0 4rem;
+    background-image: url(../image/background_sect3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+}
+.sect3_title_project{
+    text-align: center;
+    width: 15rem;
+    height: 2.3rem;
+    line-height: 2.5rem;
+    margin: 2rem auto 0 auto ;
+    font-size: 1.1rem;
+    color:wheat;
+    backdrop-filter: blur(1rem);
+    background-color: rgba(32, 147, 201, 0.2);
+}
+.sect3_kadr{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 3rem ;
+}
+.sect3_parent_box{
+    display: flex;
+    width: 100%;
+    padding: 3rem 0;
+    overflow: hidden;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+.sect3_box{
+    flex-shrink: 0;
+    text-align: center;
+    width:46%;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    box-shadow: 4px 4px 2px -0.1rem rgba(82, 189, 11, 0.582),
+    0 3px 9px rgba(61, 60, 60, 0.719);
+    backdrop-filter: blur(1rem);
+    transition: all 0.5s;
+    border-radius: 0.4rem;
+    -webkit-user-drag: none;
+}
+.set3_img{
+    width: 100%;
+    height:15rem;
+    object-fit: cover;
+    border-radius: 0.3rem;
+    -webkit-user-drag: none;
+}
+.sec3_img::selection{
+    background-color:inherit;
+}
+.sect3_link{
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color:#f5deb3;
+    transition: all 0.2s;
+}
+.sect3_name_project{
+    display: block;
+    max-width: 13rem;
+    padding: 0.3rem;
+    margin: 0.4rem auto;
+    border: none;
+    border-right: 0.2rem solid orange;
+    border-left: 0.2rem solid orange;
+    border-radius: 0.3rem;
+    background-color: rgba(16, 26, 43, 0.856);;
+    backdrop-filter: blur(1.5rem);
+}
+ #sect3_right, 
+ #sect3_left{
+    position: absolute;
+    top: 50%;
+    height: 50%;
+    transform: translateY(-50%);
+    padding: 0.3rem;
+    font-size: 2.3rem;
+    background-color: rgba(122, 98, 98, 0.014);
+    color: rgba(255, 166, 0, 0.74);
+    border-radius: 0.4rem;
+    border: none;
+    cursor: pointer;
+    transition:   all 0.3s;
+}
+#sect3_right{
+    right:  0;
+}
+#sect3_left{
+    left: 0;
+    color: wheat;
+}
+
+/* ------------------------------------------sect4  */
+.section_4{
+    
+}
+
+
+
+/* hover  --------------------------------- */
+.sect1_communication .bi:hover {
+    color: red;
+}
+.menu_repairmodle:hover{
+    color:rgb(32, 13, 206);
+}
+.menu_iteam_link_2:hover ,.menu_iteam_link:hover{
+    background-color:rgba(29, 29, 175, 0.753);
+    border-radius: 0.4rem;
+    color: wheat;
+}
+
+.sect3_name_project .sect3_link:hover{
+    color: rgb(15, 113, 206);
+}
+#sect3_right:hover, 
+#sect3_left:hover{
+ background-color: rgba(172, 163, 153, 0.452);
+}
+@media screen and (min-width:1550px) and(max-width:1700px){
+    .contenir{
+        max-width: 80rem;
+    }
+}
+@media screen and (max-width:830px){
+    .menu{
+        width:85%;
+    }
+}
+@media screen and (max-width:770px) {
+    .contenir{
+        margin-top: 0.1rem;
+        padding: 0.4rem;
+    }
+    .menu_icone{
+        right: 1rem;
+    }
+    .menu_repairmodle{
+        display: none;
+    }
+    /* -------------------- 1 */
+    .section_1{
+        flex-direction: column;
+    }
+    .sect1_picktur{
+        width: 45%;
+    }
+    .sect1_par_desc{
+        margin-top: 2rem;
+        font-size: 0.8rem;
+    }
+    .sect1_communication{
+        margin-top: 3rem;
+    }
+    /* -------------------- 2 */
+    .sect2_title_skill{
+        width: 80%;
+        margin:3rem auto 0 ;
+    }
+    .sect2_box_skill{
+        flex-wrap: wrap;
+        margin: 2rem auto;
+    }
+    .sect2_par_img ,.sect2_par_des{
+        flex-basis: 100%;
+    }
+    .sect2_name{
+        margin: 2rem auto 0.8rem auto;
+    }.sect2_desc{
+        font-size: 1.02rem;
+    }
+
+    /* -------------------- 3 */
+    .section_3{
+        padding: 0.5rem 0;
+    }
+    .sect3_box{
+        width: 98%;
+       margin: 0.2rem;
+    }
+    .sect3_box{
+        transition: all 0.35s;
+
+    }
+}
+
+@media screen and (max-width:450px) {
+    .sect1_picktur{
+        width: 70%;
+    }
+}
+/* animation------------------- */
+@keyframes loading {
+    100% {background-size: 100% 100%}
+}
+@keyframes theme_translateX {
+    0%,100%{
+     transform:translateX(0) rotate(0);     
+    }
+    50%{
+        transform:translateX(130%) rotate(180deg);
+    }
+}
+@keyframes scale_menu_icone {
+    to{
+        transform: scale(90%);
+    }
+    from{
+        transform: scale(100%);
+    }
+}
+@keyframes rotate_repair {
+    to{
+        transform: rotate(0);
+    }
+    from{
+        transform: rotate(80deg);
+    }
+}
+@keyframes scale_img {
+    0%,100%{
+        transform: scale(98%);
+    }
+    50%{
+        transform: scale(100%);
+    }
+}

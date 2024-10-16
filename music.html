@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="style/style_music.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link rel="shortcut icon" href="image/favicone_zero.jpg" type="image/x-icon" />
+    <title>music plyer</title>
+  </head>
+  <body>
+    <div class="loader"></div>
+    <section class="section" id="music">
+      <div class="musicKadr">
+        <div class="musicKadr_right">
+          <div class="Kadr_right_p_nameList_canslePlaylist">
+            <button class="right_cansle_playList">
+              <i class="bi bi-x-square-fill"></i>
+            </button>
+            <h2 class="right_nameList">music list</h2>
+          </div>
+          <ul class="right_list"></ul>
+        </div>
+        <div class="musicKadr_left">
+          <div class="left_p_imgLarg imgLarg_small">
+            <img src="" alt="img singer" class="left_imgLarg" />
+            <i class="bi bi-chevron-compact-left left"></i>
+            <i class="bi bi-chevron-compact-right right"></i>
+            <div class="imgLarg_shadow_left"></div>
+            <div class="imgLarg_shadow_right"></div>
+          </div>
+          <div class="left_p_heart_name">
+            <button class="left_heart"><i class="bi bi-heart-fill"></i></button>
+            <div class="left_p_name">
+              <p class="left_nameMusic"></p>
+              <h4 class="left_nameSinger"></h4>
+            </div>
+          </div>
+          <div class="left_like_listmusic_respanseve">
+            <button class="btn_playlist">
+              <i class="bi bi-music-note-list" title="play list"></i>
+            </button>
+            <button class="left_heart2_reapansive">
+              <i class="bi bi-heart-fill" title="like"></i>
+            </button>
+          </div>
+          <div class="left_p_navr_time">
+            <div class="left_p_time">
+              <p class="time_end"></p>
+              <p class="time_now">00 : 00</p>
+            </div>
+            <div class="left_p_navar">
+              <div class="left_navar">
+                <div class="left_navar_color"></div>
+              </div>
+            </div>
+          </div>
+          <div class="left_icones_for_work">
+            <button class="music_shuffled"><i class="bi bi-shuffle" title="shuffled"></i></button>
+            <button class="music_next"><i class="bi bi-fast-forward-circle-fill" title="next"></i></button>
+            <button class="music_pause disply_hidden_forPlay" title="puse"><i class="bi bi-pause-circle-fill"></i></button>
+            <button class="music_play"><i class="bi bi-play-circle-fill" title="play"></i></button>
+            <button class="music_previous"><i class="bi bi-fast-forward-circle-fill" title="previous"></i></button>
+            <button class="music_repeat"><i class="bi bi-repeat" title="repeat"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="javascrept/music.js"></script>
+  </body>
+</html>
