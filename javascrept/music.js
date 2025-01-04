@@ -210,16 +210,17 @@ const right_all_iteam = $.querySelectorAll(".right_list_iteam");
 const p_imgLarg = $.querySelector(".left_p_imgLarg");
 // placement iteam selected
 function fanc_placement(iteam) {
+  console.log(iteam);
   left_imgLarg.src = iteam.srcImg;
-  left_nameMusic.innerText = iteam.nameMusic;
-  left_nameSinger.innerText = iteam.nameSinger;
-  left_time_end.innerText = iteam.timeEnd;
+  left_nameMusic.textContent = iteam.nameMusic;
+  left_nameSinger.textContent = iteam.nameSinger;
+  left_time_end.textContent = iteam.timeEnd;
   audio.src = iteam.srcAudio;
   if (isPlay) {
     isPlay = false;
     fanc_play();
   }
-  if (iteam.heart == "red") left_heart.classList.add("left_color_heart");
+  if (iteam.heart === "red") left_heart.classList.add("left_color_heart");
   else left_heart.classList.remove("left_color_heart");
 }
 // remove background iteam
@@ -276,7 +277,7 @@ let random;
 function fanc_original_shuffled() {
   while (true) {
     random = Math.floor(Math.random() * list_music_all.length) + 1;
-    if (random != iteam_selected_id) break;
+    if (random !== iteam_selected_id) break;
   }
   iteam_selected_id = random;
   clearAndSetBackgroundItem(right_all_iteam[iteam_selected_id - 1]);
@@ -286,18 +287,10 @@ function fanc_original_shuffled() {
 function click_shuffled() {
   if (!isSHuffled) {
     $.querySelector(".music_shuffled i").classList.add("music_repeat_color");
-    left_icone_next.removeEventListener("click", fanc_next);
-    left_icone_next.addEventListener("click", fanc_original_shuffled);
-    left_icone_previous.removeEventListener("click", fanc_previous);
-    left_icone_previous.addEventListener("click", fanc_original_shuffled);
     isSHuffled = true;
     if (isLoop) fanc_loop();
   } else {
     $.querySelector(".music_shuffled i").classList.remove("music_repeat_color");
-    left_icone_next.removeEventListener("click", fanc_original_shuffled);
-    left_icone_next.addEventListener("click", fanc_next);
-    left_icone_previous.removeEventListener("click", fanc_original_shuffled);
-    left_icone_previous.addEventListener("click", fanc_previous);
     isSHuffled = false;
   }
 }
@@ -343,7 +336,7 @@ function list_music_chang_heart() {
 }
 // img slider
 function fanc_slider(vrodi) {
-  if (vrodi == "left") {
+  if (vrodi === "left") {
     $.querySelector(".imgLarg_shadow_left").style.width = "100%";
     setTimeout(() => {
       $.querySelector(".imgLarg_shadow_left").style.width = "0";
@@ -460,12 +453,10 @@ function chang_media(matches) {
     left_heart = $.querySelector(".left_heart i");
     left_heart.addEventListener("click", fanc_heart_color);
   }
-  if (list_music_all[iteam_selected_id - 1].heart == "red")
+  if (list_music_all[iteam_selected_id - 1].heart === "red")
     left_heart.classList.add("left_color_heart");
   else left_heart.classList.remove("left_color_heart");
 }
-// window 470
-const music_media_hight = window.matchMedia("(max-width:470px)");
 if (music_media.matches) {
   $.querySelector(".section").style.height = window.innerHeight - 2 + "px";
 }
@@ -498,7 +489,7 @@ if (music_media.matches) {
         wich_3dot = event.target.closest("button").nextElementSibling;
         isTouch_3dot = true;
       } else {
-        if (wich_3dot == event.target.closest("button").nextElementSibling) {
+        if (wich_3dot === event.target.closest("button").nextElementSibling) {
           event.target.closest("button").nextElementSibling.style.display =
             "none";
           isTouch_3dot = false;
@@ -545,11 +536,11 @@ left_icone_pause.addEventListener("click", () =>
 );
 
 left_icone_next.addEventListener("click", () =>
-  animat_click_btn(left_icone_next, fanc_next)
+  animat_click_btn(left_icone_next, !isSHuffled?fanc_next:fanc_original_shuffled)
 );
 
 left_icone_previous.addEventListener("click", () =>
-  animat_click_btn(left_icone_previous, fanc_previous)
+  animat_click_btn(left_icone_previous, !isSHuffled?fanc_previous:fanc_original_shuffled)
 );
 
 left_btn_playList.addEventListener("click", () =>
