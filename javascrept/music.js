@@ -19,22 +19,43 @@ function createObjectMusic(
 list_music_all.push(
   new createObjectMusic(
     1,
-    "Dans Les Alpes (128)","Majid Entezami","../image_music/13-MajidEntezami-DansLesAlpes-1.jpg","../music/MajidEntezami-DansLesAlpes.mp3","02:16", "white"
+    "Dans Les Alpes (128)",
+    "Majid Entezami",
+    "image_music/13-MajidEntezami-DansLesAlpes-1.jpg",
+    "music/MajidEntezami-DansLesAlpes.mp3",
+    "02:16",
+    "white"
   )
 );
 list_music_all.push(
-  new createObjectMusic(2,"imagine","john Lenon","../image_music/john-lenon.jpg","../music/JohnLenon-Imagine.mp3","03:07","white")
+  new createObjectMusic(
+    2,
+    "imagine",
+    "john Lenon",
+    "image_music/john-lenon.jpg",
+    "music/JohnLenon-Imagine.mp3",
+    "03:07",
+    "white"
+  )
 );
 list_music_all.push(
-  new createObjectMusic(3,"arosak koki","forgh farokhzad","../image_music/forough-farrokhzad.jpg","../music/frogh-farokhzad.mp3","02:28","white")
+  new createObjectMusic(
+    3,
+    "arosak koki",
+    "forgh farokhzad",
+    "image_music/forough-farrokhzad.jpg",
+    "music/frogh-farokhzad.mp3",
+    "02:28",
+    "white"
+  )
 );
 list_music_all.push(
   new createObjectMusic(
     4,
     "aye hai zamini",
     "forgh farokhzad",
-    "../image_music/forough-farokhzad2.jpg",
-    "../music/frogh_farokhzad2.mp3",
+    "image_music/forough-farokhzad2.jpg",
+    "music/frogh_farokhzad2.mp3",
     "04:58",
     "white"
   )
@@ -44,8 +65,8 @@ list_music_all.push(
     5,
     "Harfamo Bavar Bekoneh",
     "fereydoun_Farrokhzad",
-    "../image_music/fereydoun_Farrokhzad.jpg",
-    "../music/Fereydoun_Farrokhzad-Harfamo-Bavar-Bekoneh.mp3",
+    "image_music/fereydoun_Farrokhzad.jpg",
+    "music/Fereydoun_Farrokhzad-Harfamo-Bavar-Bekoneh.mp3",
     "04:41",
     "white"
   )
@@ -55,8 +76,8 @@ list_music_all.push(
     6,
     "McGowan_Mad_Girls",
     "Carol Anne",
-    "../image_music/Carol_Anne_McGowan_Mad_Girls.jpg",
-    "../music/Carol_Anne_McGowan_Mad_Girls.mp3",
+    "image_music/Carol_Anne_McGowan_Mad_Girls.jpg",
+    "music/Carol_Anne_McGowan_Mad_Girls.mp3",
     "02:15",
     "white"
   )
@@ -66,8 +87,8 @@ list_music_all.push(
     7,
     "Dar Khyal",
     "Behrokh Shoorvarzi",
-    "../image_music/Behrokh Shoorvarzi-Dar Khyal-musiclazem.ir_.jpg",
-    "../music/Behrokh_Shoorvarzi-Dar-Khyal.mp3",
+    "image_music/Behrokh Shoorvarzi-Dar Khyal-musiclazem.ir_.jpg",
+    "music/Behrokh_Shoorvarzi-Dar-Khyal.mp3",
     "02:25",
     "white"
   )
@@ -77,8 +98,8 @@ list_music_all.push(
     8,
     "Dkhonak andam ke ",
     "ghazal shakeri",
-    "../image_music/ghazal-shakeri.jpeg",
-    "../music/Dkhonakandamkeneshinim.mp3",
+    "image_music/ghazal-shakeri.jpeg",
+    "music/Dkhonakandamkeneshinim.mp3",
     "04:20",
     "white"
   )
@@ -88,8 +109,8 @@ list_music_all.push(
     9,
     "People",
     "Kat Frankie",
-    "../image_music/Kat Frankie.jpg",
-    "../music/Kat-Frankie-People.mp3",
+    "image_music/Kat Frankie.jpg",
+    "music/Kat-Frankie-People.mp3",
     "05:35",
     "white"
   )
@@ -99,8 +120,8 @@ list_music_all.push(
     10,
     "Go zar",
     "unknown",
-    "../image_music/takhta_jamshed.jpg",
-    "../music/music_gozar.mp3",
+    "image_music/takhta_jamshed.jpg",
+    "music/music_gozar.mp3",
     "05:55",
     "white"
   )
@@ -110,8 +131,8 @@ list_music_all.push(
     11,
     "Marge Nazli",
     "Shahin Najafi",
-    "../image_music/Shahin Najafi - photo by Amin Khelghat….jpg",
-    "../music/ShahinNajafi_Marge-Nazli.mp3",
+    "image_music/Shahin Najafi - photo by Amin Khelghat….jpg",
+    "music/ShahinNajafi_Marge-Nazli.mp3",
     "04:30",
     "white"
   )
@@ -121,8 +142,8 @@ list_music_all.push(
     12,
     "life ",
     "unknown",
-    "../image_music/rock.jpg",
-    "../music/music_life.mp3",
+    "image_music/rock.jpg",
+    "music/music_life.mp3",
     "03:04",
     "white"
   )
@@ -132,8 +153,8 @@ list_music_all.push(
     13,
     "On the Nature",
     "Max Richter",
-    "../image_music/TheBlueNotebooks-Cover-Web.jpg",
-    "../music/On-the-Nature-of-Daylight.mp3",
+    "image_music/TheBlueNotebooks-Cover-Web.jpg",
+    "music/On-the-Nature-of-Daylight.mp3",
     "06:11",
     "white"
   )
@@ -150,9 +171,9 @@ const left_icone_pause = $.querySelector(".music_pause");
 const left_icone_play = $.querySelector(".music_play");
 const left_icone_previous = $.querySelector(".music_previous");
 const left_icone_repeat = $.querySelector(".music_repeat");
-const audio = new Audio("../music/MajidEntezami-DansLesAlpes.mp3");
+const audio = new Audio();
 const left_btn_playList = $.querySelector(".btn_playlist");
-const cansle_playList=$.querySelector(".right_cansle_playList");
+const cansle_playList = $.querySelector(".right_cansle_playList");
 let left_heart = $.querySelector(".left_heart i");
 let array_heart = [];
 let isPlay = false;
@@ -161,12 +182,25 @@ let iteam_selected_id;
 const music_link_addrsse = "https://alireezashokri.ir/music.html";
 function create_iteam() {
   list_music_all.forEach(function (iteam) {
-    right_list.insertAdjacentHTML("beforeend",
-      `<li class="right_list_iteam"><p class="right_iteam_number">${iteam.id }</p>
-      <img src="${iteam.srcImg}" alt="img singer" class="right_iteam_img"><div class="right_iteam_p_name"><h4 class="right_iteam_nameMusic">${iteam.nameMusic}</h4>
-      <p class="right_iteam_nameSinger"> ${iteam.nameSinger}</p></div><p class="right_iteam_timeMusic">${iteam.timeEnd}</p>
+    right_list.insertAdjacentHTML(
+      "beforeend",
+      `<li class="right_list_iteam"><p class="right_iteam_number">${
+        iteam.id
+      }</p>
+      <img src="${
+        iteam.srcImg
+      }" alt="img singer" class="right_iteam_img"><div class="right_iteam_p_name"><h4 class="right_iteam_nameMusic">${
+        iteam.nameMusic
+      }</h4>
+      <p class="right_iteam_nameSinger"> ${
+        iteam.nameSinger
+      }</p></div><p class="right_iteam_timeMusic">${iteam.timeEnd}</p>
       <button class="right_iteam_icone3dot"><i class="bi bi-three-dots"></i></button> 
-      <div class="right_kader_3dot"><a href="${iteam.srcAudio}"class="music_download" target="_blank" download> <i class="bi bi-download"></i></a><a href="https://t.me/share/url?url=${encodeURIComponent(music_link_addrsse)}"class="music_share"  target="_blank"><i class="bi bi-telegram" title="telegram"></i></a></div></li>`
+      <div class="right_kader_3dot"><a href="${
+        iteam.srcAudio
+      }"class="music_download" target="_blank" download> <i class="bi bi-download"></i></a><a href="https://t.me/share/url?url=${encodeURIComponent(
+        music_link_addrsse
+      )}"class="music_share"  target="_blank"><i class="bi bi-telegram" title="telegram"></i></a></div></li>`
     );
   });
 }
@@ -176,17 +210,17 @@ const right_all_iteam = $.querySelectorAll(".right_list_iteam");
 const p_imgLarg = $.querySelector(".left_p_imgLarg");
 // placement iteam selected
 function fanc_placement(iteam) {
-    left_imgLarg.src = iteam.srcImg;
-    left_nameMusic.innerText = iteam.nameMusic;
-    left_nameSinger.innerText = iteam.nameSinger;
-    left_time_end.innerText = iteam.timeEnd;
-    audio.src = iteam.srcAudio;
-    if (isPlay) {
-      isPlay = false;
-      fanc_play();
-    }
-    if (iteam.heart == "red") left_heart.classList.add("left_color_heart");
-    else left_heart.classList.remove("left_color_heart");
+  left_imgLarg.src = iteam.srcImg;
+  left_nameMusic.innerText = iteam.nameMusic;
+  left_nameSinger.innerText = iteam.nameSinger;
+  left_time_end.innerText = iteam.timeEnd;
+  audio.src = iteam.srcAudio;
+  if (isPlay) {
+    isPlay = false;
+    fanc_play();
+  }
+  if (iteam.heart == "red") left_heart.classList.add("left_color_heart");
+  else left_heart.classList.remove("left_color_heart");
 }
 // remove background iteam
 function clearAndSetBackgroundItem(event_target) {
@@ -285,8 +319,10 @@ function fanc_loop() {
 function fanc_heart_color() {
   if (left_heart.classList.contains("left_color_heart")) {
     left_heart.classList.remove("left_color_heart");
-    let = inedex_remove = JSON.parse(localStorage.getItem("color_heart")).findIndex(function (iteam) {
-    return iteam == iteam_selected_id;
+    let = inedex_remove = JSON.parse(
+      localStorage.getItem("color_heart")
+    ).findIndex(function (iteam) {
+      return iteam == iteam_selected_id;
     });
     array_heart.splice(inedex_remove, 1);
     localStorage.setItem("color_heart", JSON.stringify(array_heart));
@@ -300,8 +336,10 @@ function fanc_heart_color() {
 }
 // chang list_music heart
 function list_music_chang_heart() {
-  if (localStorage.getItem("color_heart")){
-    JSON.parse(localStorage.getItem("color_heart")).forEach(function(iteam_storage){
+  if (localStorage.getItem("color_heart")) {
+    JSON.parse(localStorage.getItem("color_heart")).forEach(function (
+      iteam_storage
+    ) {
       list_music_all[iteam_storage - 1].heart = "red";
       array_heart.push(iteam_storage);
     });
@@ -333,7 +371,9 @@ p_imgLarg.addEventListener("mouseup", function (event) {
   else if (imgLarg_start_x > event.offsetX + 50) fanc_slider("right");
 });
 // touch slider
-p_imgLarg.addEventListener("touchstart",function (event) {
+p_imgLarg.addEventListener(
+  "touchstart",
+  function (event) {
     event.preventDefault();
     imgLarg_start_x = event.touches[0].clientX;
   },
@@ -349,34 +389,35 @@ p_imgLarg.addEventListener("touchend", function (event) {
 let minut;
 let secend;
 audio.addEventListener("timeupdate", function () {
-    $.querySelector(".left_navar_color").style.width =(audio.currentTime / audio.duration) * 100 + "%";
-    minut = Math.floor(audio.currentTime / 60);
-    secend = Math.floor(audio.currentTime % 60);
-    if (minut < 10) minut = "0" + minut;
-    if (secend < 10) secend = "0" + secend;
-    $.querySelector(".time_now").textContent = minut + ":" + secend;
+  $.querySelector(".left_navar_color").style.width =
+    (audio.currentTime / audio.duration) * 100 + "%";
+  minut = Math.floor(audio.currentTime / 60);
+  secend = Math.floor(audio.currentTime % 60);
+  if (minut < 10) minut = "0" + minut;
+  if (secend < 10) secend = "0" + secend;
+  $.querySelector(".time_now").textContent = minut + ":" + secend;
 });
 // navar click
 let isClick = false;
 let mouse_move = false;
 const left_p_navar = $.querySelector(".left_p_navar");
 left_p_navar.addEventListener("mousedown", function (event) {
-    event.preventDefault();
-    audio.currentTime = (event.offsetX / this.clientWidth) * audio.duration;
-    isClick = true;
+  event.preventDefault();
+  audio.currentTime = (event.offsetX / this.clientWidth) * audio.duration;
+  isClick = true;
 });
 left_p_navar.addEventListener("mouseup", function () {
   isClick = false;
   if (mouse_move && isPlay) {
-      audio.play();
-      mouse_move = false;
+    audio.play();
+    mouse_move = false;
   }
 });
 left_p_navar.addEventListener("mouseleave", function () {
   isClick = false;
   if (mouse_move && isPlay) {
-      audio.play();
-      mouse_move = false;
+    audio.play();
+    mouse_move = false;
   }
 });
 left_p_navar.addEventListener("mousemove", function (event) {
@@ -387,12 +428,16 @@ left_p_navar.addEventListener("mousemove", function (event) {
   }
 });
 let isTuoch = false;
-left_p_navar.addEventListener("touchmove",function (event) {
+left_p_navar.addEventListener(
+  "touchmove",
+  function (event) {
     isTuoch = true;
     event.preventDefault();
-    audio.currentTime =(event.changedTouches[0].pageX / this.clientWidth) * audio.duration;
+    audio.currentTime =
+      (event.changedTouches[0].pageX / this.clientWidth) * audio.duration;
     audio.pause();
-  },{ passive: false}
+  },
+  { passive: false }
 );
 left_p_navar.addEventListener("touchend", function (event) {
   if (isTuoch && isPlay) {
@@ -403,7 +448,10 @@ left_p_navar.addEventListener("touchend", function (event) {
 // music ended
 audio.addEventListener("ended", function () {
   if (isSHuffled) fanc_original_shuffled();
-  else { isPlay = true ; fanc_play()};
+  else {
+    isPlay = true;
+    fanc_play();
+  }
 });
 // window media 1100
 const music_media = window.matchMedia("(max-width:1100px)");
@@ -426,10 +474,14 @@ if (music_media.matches) {
   $.querySelector(".section").style.height = window.innerHeight - 2 + "px";
 }
 
-//  fanc_cansle_playList 
-function fanc_cansle_playList(){
-  $.querySelector(".musicKadr_right").classList.remove("musicKadr_right_go_top");
-  $.querySelector(".musicKadr_left").classList.remove("left_pointer_event_none");
+//  fanc_cansle_playList
+function fanc_cansle_playList() {
+  $.querySelector(".musicKadr_right").classList.remove(
+    "musicKadr_right_go_top"
+  );
+  $.querySelector(".musicKadr_left").classList.remove(
+    "left_pointer_event_none"
+  );
 }
 
 // fanc play list
@@ -445,16 +497,19 @@ if (music_media.matches) {
   all_icone_3dot.forEach(function (iteam) {
     iteam.addEventListener("click", function (event) {
       if (!isTouch_3dot) {
-        event.target.closest("button").nextElementSibling.style.display ="block";
+        event.target.closest("button").nextElementSibling.style.display =
+          "block";
         wich_3dot = event.target.closest("button").nextElementSibling;
         isTouch_3dot = true;
       } else {
         if (wich_3dot == event.target.closest("button").nextElementSibling) {
-          event.target.closest("button").nextElementSibling.style.display ="none";
+          event.target.closest("button").nextElementSibling.style.display =
+            "none";
           isTouch_3dot = false;
         } else {
           wich_3dot.style.display = "none";
-          event.target.closest("button").nextElementSibling.style.display ="block";
+          event.target.closest("button").nextElementSibling.style.display =
+            "block";
           wich_3dot = event.target.closest("button").nextElementSibling;
         }
       }
@@ -486,23 +541,28 @@ window.onload = function () {
 left_heart.addEventListener("click", fanc_heart_color);
 
 left_icone_play.addEventListener("click", () =>
-  animat_click_btn(left_icone_play, fanc_play));
+  animat_click_btn(left_icone_play, fanc_play)
+);
 
 left_icone_pause.addEventListener("click", () =>
-  animat_click_btn(left_icone_pause, fanc_play));
+  animat_click_btn(left_icone_pause, fanc_play)
+);
 
 left_icone_next.addEventListener("click", () =>
-  animat_click_btn(left_icone_next, fanc_next));
+  animat_click_btn(left_icone_next, fanc_next)
+);
 
 left_icone_previous.addEventListener("click", () =>
-  animat_click_btn(left_icone_previous, fanc_previous));
+  animat_click_btn(left_icone_previous, fanc_previous)
+);
 
 left_btn_playList.addEventListener("click", () =>
-  animat_click_btn(left_btn_playList, fanc_playList));
+  animat_click_btn(left_btn_playList, fanc_playList)
+);
 
-cansle_playList.addEventListener('click' ,()=> 
-  animat_click_btn (cansle_playList ,fanc_cansle_playList));
-
+cansle_playList.addEventListener("click", () =>
+  animat_click_btn(cansle_playList, fanc_cansle_playList)
+);
 
 left_icone_repeat.addEventListener("click", fanc_loop);
 left_icone_shuffled.addEventListener("click", click_shuffled);
